@@ -1,0 +1,17 @@
+#Dependencies
+node_modules/
+
+# ENV 
+server/.env
+client/.env
+.env
+
+#logs
+.logs
+logs/
+
+#Built Output 
+dist/
+build/
+
+
