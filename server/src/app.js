@@ -5,6 +5,8 @@ import authRouter from "./routes/auth.route.js";
 import instructorRouter from "./routes/instructor.route.js";
 import courseRouter from "./routes/course.route.js";
 import lectureRouter from "./routes/lecture.route.js";
+import env from "./config/env.js";
+
 let app = express();
 
 
@@ -15,7 +17,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
   })
 );
