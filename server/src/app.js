@@ -11,11 +11,13 @@ let app = express();
 
 
 app.use(
-  cors({
-    origin: env.CLIENT_URL,
-    credentials: true,
-  })
+    cors({
+        origin: "https://ideamagixassesment-h8po.vercel.app",
+        credentials: true,
+    })
 );
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
