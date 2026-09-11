@@ -10,17 +10,17 @@ import env from "./config/env.js";
 let app = express();
 
 
+app.use(
+  cors({
+    origin: env.CLIENT_URL,
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
-app.use(
-  cors({
-    origin: env.CLIENT_URL || "http://localhost:5173",
-    credentials: true,
-  })
-);
 
 
 
