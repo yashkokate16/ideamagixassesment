@@ -13,7 +13,7 @@ await connectDb();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://ideamagixassesment-h8po.vercel.app",
+  "https://ideamagixassesment-h8po.vercel.app/api",
 ];
 
 app.use(
