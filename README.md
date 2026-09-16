@@ -196,7 +196,7 @@ GET /admin/instructors
 
 ### Backend
 
-The backend is deployed on Render:
+The backend is deployed on Vercel:
 
 ```text
 https://ideamagixassesment-eslz.vercel.app
@@ -227,7 +227,7 @@ Make sure MongoDB Atlas allows the deployed backend to connect.
 - Add `.env` to `.gitignore`.
 - Set `NODE_ENV=production` on Render.
 - Set the correct Vercel frontend URL as `CLIENT_URL`.
-- Set the Render backend URL as `VITE_SERVER_URL`.
+- Set the Vercel backend URL as `VITE_SERVER_URL`.
 
 ## Author
 
