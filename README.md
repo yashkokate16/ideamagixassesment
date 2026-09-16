@@ -102,13 +102,13 @@ CLIENT_URL=http://localhost:5173
 Create a `.env` file inside the client directory:
 
 ```env
-VITE_SERVER_URL=http://localhost:3000/api
+VITE_SERVER_URL=http://localhost:3000
 ```
 
 For production:
 
 ```env
-VITE_SERVER_URL=https://ideamagixassesment.onrender.com/api
+VITE_SERVER_URL=https://ideamagixassesment-eslz.vercel.app
 ```
 
 **Never commit `.env` files or secret keys to GitHub.**
@@ -168,28 +168,28 @@ After successful login:
 ### Authentication
 
 ```text
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/logout
-GET  /api/auth/me
+POST /auth/register
+POST /auth/login
+POST /auth/logout
+GET  /auth/me
 ```
 
 ### Admin - Instructors
 
 ```text
-GET /api/admin/instructors
+GET /admin/instructors
 ```
 
 ### Admin - Courses
 
 ```text
-/api/admin/courses
+/admin/courses
 ```
 
 ### Lectures
 
 ```text
-/api/lectures
+/lectures
 ```
 
 ## Deployment
@@ -199,7 +199,7 @@ GET /api/admin/instructors
 The backend is deployed on Render:
 
 ```text
-https://ideamagixassesment.onrender.com
+https://ideamagixassesment-eslz.vercel.app
 ```
 
 ### Frontend
@@ -209,7 +209,7 @@ The frontend is deployed on Vercel.
 Production frontend environment variable:
 
 ```env
-VITE_SERVER_URL=https://ideamagixassesment.onrender.com/api
+VITE_SERVER_URL=https://ideamagixassesment-eslz.vercel.app
 ```
 
 Production backend environment variables should include:
