@@ -11,9 +11,20 @@ let app = express();
 
 await connectDb();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://ideamagixassesment-h8po.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "https://ideamagixassesment-h8po.vercel.app",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
@@ -34,13 +45,10 @@ app.get("/", (req, res) =>{
 })
 
 
-app.use("/api/auth", authRouter);
-
-app.use("/api/admin/instructors", instructorRouter);
-
-app.use("/api/admin/courses", courseRouter);
-
-app.use("/api/lectures", lectureRouter);
+app.use("/auth", authRouter);
+app.use("/admin/instructors", instructorRouter);
+app.use("/admin/courses", courseRouter);
+app.use("/lectures", lectureRouter);
 
 
 export default app;
